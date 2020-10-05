@@ -9,12 +9,28 @@ private:
 	//Données membres
 	int m_nX;
 	int m_nY;
+	
 
 
 public:
 
 	//fonctions membres
 	void affichePoint() const;
+
+	//pas de fct init
+	/*inline void init() {
+		m_nX = 0;
+		m_nY = 0;
+	}*/
+
+	//Get
+	int getnX() const;
+	int getnY()const;
+
+	//Set
+	void setnX(int n_val);
+	void setnY(int n_val);
+
 
 };
 
