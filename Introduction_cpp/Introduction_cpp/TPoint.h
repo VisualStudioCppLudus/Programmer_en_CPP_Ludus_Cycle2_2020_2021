@@ -7,8 +7,10 @@ typedef struct tpoint{
 	int x;
 	int y;
 
+	//prototype
+	void affichePoint(tpoint);
+
 }tpoint;
 
-//prototype
-void affichePoint(tpoint);
+
 

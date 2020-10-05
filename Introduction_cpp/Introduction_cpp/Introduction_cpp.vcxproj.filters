@@ -21,9 +21,15 @@
     <ClCompile Include="tpoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CPoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

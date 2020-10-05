@@ -2,9 +2,10 @@
 #include "TPoint.h"
 
 
-void affichePoint(tpoint pt) {
 
+
+void tpoint::affichePoint(tpoint pt)
+{
 	printf("x :%d\n", pt.x);
-	printf("y :%d\n", pt.y); 
-
+	printf("y :%d\n", pt.y);
 }

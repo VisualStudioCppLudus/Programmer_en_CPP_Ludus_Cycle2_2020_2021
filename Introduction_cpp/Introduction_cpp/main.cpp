@@ -1,20 +1,12 @@
-#include <stdio.h>
-#include "TPoint.h"
+#include"CPoint.h"
 
 int main() {
 
-
-	printf("Hello World\n");
+	//Instance de classe CPoint
+	CPoint pt;
 	
-	tpoint pt;
-
-	pt.x = 10;
-	pt.y = 20;
-
-	affichePoint(pt);
-
-
-
+	//appel methode publique affichePoint()
+	pt.affichePoint();
 
 	return 0;
 }
