@@ -1,17 +1,23 @@
 #include"CPoint.h"
 #include <iostream>
 
+
 using namespace std;
 
 int main() {
 
+
+	string strTypePoint = "shhshd";
 	//Instance de classe CPoint
 	CPoint pt; //appel du constructeur sans parametres
 
-	CPoint pt2(8, 9); //appel du constructeur avec parametres
+	CPoint pt2(8, 9,strTypePoint); //appel du constructeur avec parametres
 	
 	int n_X;
 	int n_Y;
+
+	char car = strTypePoint[1];
+
 
 	//ou std::cout
 	cout << "Entrez le premier entier" << endl;
@@ -26,6 +32,8 @@ int main() {
 	
 	cout << "X : " << n_X << endl;
 	cout << "Y : " << n_Y << endl;
+
+
 
 
 	return 0;

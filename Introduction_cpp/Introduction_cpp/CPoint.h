@@ -2,6 +2,10 @@
 #ifndef CPOINT_H
 #define CPOINT_H
 
+#include <string>
+
+using namespace std;
+
 class CPoint
 {
 
@@ -9,6 +13,9 @@ private:
 	//Données membres
 	int m_nX;
 	int m_nY;
+
+	string m_strType;
+
 	
 
 
@@ -26,9 +33,8 @@ public:
 	CPoint();
 
 	//Constructeur avec parametres
-	CPoint(int n_valx, int n_valy);
+	CPoint(int n_valx, int n_valy, string m_strType);
 
-	
 
 
 
