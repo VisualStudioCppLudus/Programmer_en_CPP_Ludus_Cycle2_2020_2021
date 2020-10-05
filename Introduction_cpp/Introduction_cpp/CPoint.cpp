@@ -1,12 +1,5 @@
 #include "CPoint.h"
-#include <stdio.h>
 
-void CPoint::affichePoint() const
-{
-	
-	printf("x :%d\n", getnX());
-	printf("y :%d\n", getnY());
-}
 
 //Constructeur
 CPoint::CPoint()

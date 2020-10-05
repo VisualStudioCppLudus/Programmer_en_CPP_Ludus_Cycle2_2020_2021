@@ -14,8 +14,7 @@ private:
 
 public:
 
-	//fonctions membres
-	void affichePoint() const;
+
 
 	//pas de fct init
 	/*inline void init() {
