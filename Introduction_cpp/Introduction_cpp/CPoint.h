@@ -23,6 +23,16 @@ public:
 		m_nY = 0;
 	}*/
 
+	//Constructeur
+	CPoint();
+
+	//Constructeur avec parametres
+	CPoint(int n_valx, int n_valy);
+
+	
+
+
+
 	//Get
 	int getnX() const;
 	int getnY()const;

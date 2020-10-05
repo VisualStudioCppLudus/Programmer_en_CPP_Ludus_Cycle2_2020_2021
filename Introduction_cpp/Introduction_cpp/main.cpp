@@ -4,16 +4,12 @@
 int main() {
 
 	//Instance de classe CPoint
-	CPoint pt;
+	CPoint pt; //appel du constructeur sans parametres
 
-	//initilisation
-	//pt.init();
+	CPoint pt2(8, 9); //appel du constructeur avec parametres
+	
 
-	pt.setnX(15);
-	pt.setnY(25);
 
-	//appel methode publique affichePoint()
-	//pt.affichePoint();
 
 	printf("x : %d", pt.getnX());
 	printf("y : %d", pt.getnY());
