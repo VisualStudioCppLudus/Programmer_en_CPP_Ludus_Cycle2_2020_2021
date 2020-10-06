@@ -29,11 +29,14 @@ public:
 		m_nY = 0;
 	}*/
 
-	//Constructeur
-	CPoint();
+	
+	
 
 	//Constructeur avec parametres
 	CPoint(int n_valx, int n_valy, string m_strType);
+
+	//Constructeur defaut
+	CPoint(int n_valx=0, int n_valy=0);
 
 
 
@@ -45,6 +48,12 @@ public:
 	//Set
 	void setnX(int n_val);
 	void setnY(int n_val);
+
+	//procedure deplace point
+	void deplacePoint(int n_X, int n_Y);
+
+	//procedure coincidePoint
+	bool coincidePoint(CPoint &pt);
 
 
 };
