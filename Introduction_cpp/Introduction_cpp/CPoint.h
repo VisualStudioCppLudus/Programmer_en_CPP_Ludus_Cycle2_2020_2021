@@ -14,7 +14,9 @@ private:
 	int m_nX;
 	int m_nY;
 
-	string m_strType;
+	//string m_strType;
+
+	char* m_strType;
 
 	
 
@@ -38,7 +40,7 @@ public:
 	//Constructeur defaut
 	CPoint(int n_valx=0, int n_valy=0);
 
-
+	~CPoint();
 
 
 	//Get

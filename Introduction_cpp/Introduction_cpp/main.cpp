@@ -1,6 +1,6 @@
 #include"CPoint.h"
 #include <iostream>
-
+//#define TAILLE 100
 
 using namespace std;
 
@@ -8,6 +8,9 @@ void echangePoint(CPoint&, CPoint&);
 
 
 void echangePoint(CPoint*, CPoint*);
+
+const int TAILLE = 100;
+
 
 int main() {
 
@@ -18,11 +21,15 @@ int main() {
 
 	CPoint pt2(8, 9,"pivot"); //appel du constructeur avec parametres
 	
-	CPoint tabPoint[100];
+	//CPoint *tabPoint=new CPoint[TAILLE];
 
-	for (int i = 0; i < 100; i++)
+
+	/*for (int i = 0; i < 100; i++)
 		tabPoint[i] = pt2;
 	
+	delete [] tabPoint;*/
+
+
 	pt.deplacePoint(2, 3);
 
 	CPoint pt3(8, 9, "point3");
