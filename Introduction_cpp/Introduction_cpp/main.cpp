@@ -67,6 +67,8 @@ int main() {
 	cout << "pt.x : " << pt.getnX() << " pt.y : " << pt.getnY() << endl;
 	cout << "pt2.x : " << pt2.getnX() << " pt2.y : " << pt2.getnY() << endl;
 
+	cout << CPoint::val_cpt();
+
 	return 0;
 }
 

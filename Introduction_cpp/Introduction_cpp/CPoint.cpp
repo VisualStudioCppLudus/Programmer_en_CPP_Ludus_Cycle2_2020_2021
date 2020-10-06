@@ -1,6 +1,8 @@
 #include "CPoint.h"
 
 
+int  CPoint::cpt = 0;
+
 //Constructeur
 /*CPoint::CPoint()
 {
@@ -19,7 +21,9 @@ CPoint::CPoint(int m_nX, int m_nY , string m_strType):m_nX(m_nX), m_nY(m_nY)
 	this->m_strType = m_strType;*/
 
 	this->m_strType = new char[100];
-	strcpy_s(this->m_strType, 100, "pivot");
+	strcpy_s(this->m_strType, 100, const_cast<char*>(m_strType.c_str()));
+
+	cpt++;
 		
 }
 
@@ -30,11 +34,14 @@ CPoint::CPoint(int m_nX, int m_nY)
 	///this->m_strType = "pivot";
 	this->m_strType = new char[100];
 	strcpy_s(this->m_strType, 100, "pivot");
+
+	cpt++;
 }
 
 CPoint::~CPoint()
 {
 	delete[] m_strType;
+	cpt--;
 }
 
 //Assesseurs
@@ -74,4 +81,10 @@ bool CPoint::coincidePoint(CPoint &pt)
 	else {
 		return false;
 	}
+}
+
+int CPoint::val_cpt()
+{
+	
+	return cpt;
 }

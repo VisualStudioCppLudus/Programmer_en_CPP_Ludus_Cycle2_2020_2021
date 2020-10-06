@@ -18,7 +18,7 @@ private:
 
 	char* m_strType;
 
-	
+	static int cpt;
 
 
 public:
@@ -56,6 +56,8 @@ public:
 
 	//procedure coincidePoint
 	bool coincidePoint(CPoint &pt);
+
+	static int val_cpt();
 
 
 };
