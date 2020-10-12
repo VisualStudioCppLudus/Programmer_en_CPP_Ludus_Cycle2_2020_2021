@@ -3,6 +3,8 @@
 
 int  CPoint::cpt = 0;
 
+
+
 //Constructeur
 /*CPoint::CPoint()
 {

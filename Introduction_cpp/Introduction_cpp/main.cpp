@@ -1,6 +1,7 @@
 #include"CPoint.h"
+#include "CCercle.h"
 #include <iostream>
-//#define TAILLE 100
+
 
 using namespace std;
 
@@ -68,6 +69,9 @@ int main() {
 	cout << "pt2.x : " << pt2.getnX() << " pt2.y : " << pt2.getnY() << endl;
 
 	cout << CPoint::val_cpt();
+
+
+	CCercle cercle(10, 12, 8.8);
 
 	return 0;
 }

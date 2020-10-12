@@ -24,12 +24,18 @@
     <ClCompile Include="CPoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CCercle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCercle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

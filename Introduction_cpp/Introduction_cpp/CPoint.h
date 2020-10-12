@@ -23,7 +23,8 @@ private:
 
 public:
 
-
+	
+	
 
 	//pas de fct init
 	/*inline void init() {
@@ -41,6 +42,9 @@ public:
 	CPoint(int n_valx=0, int n_valy=0);
 
 	~CPoint();
+
+	
+	
 
 
 	//Get
