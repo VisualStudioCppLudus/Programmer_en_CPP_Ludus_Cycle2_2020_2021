@@ -1,5 +1,5 @@
 #include "CPoint.h"
-
+#include "CCercle.h"
 
 int  CPoint::cpt = 0;
 
@@ -85,13 +85,22 @@ bool CPoint::coincidePoint(CPoint &pt)
 	}
 }
 
+bool CPoint::coincide(CCercle& c)
+{
+	if (this->m_nX == c.m_Centre.m_nX && this->m_nY == c.m_Centre.m_nY) {
+		return true;
+	}else{
+		return false;
+	}
+}
+
 int CPoint::val_cpt()
 {
 	
 	return cpt;
 }
 
-bool coincide(CPoint& pt, CPoint& pt2)
+/*bool coincide(CPoint& pt, CPoint& pt2)
 {
 	if (pt.m_nX == pt2.m_nX && pt.m_nY == pt2.m_nY)
 	{
@@ -100,4 +109,4 @@ bool coincide(CPoint& pt, CPoint& pt2)
 	else {
 		return false;
 	}
-}
+}*/

@@ -74,7 +74,7 @@ int main() {
 	CCercle cercle(10, 12, 8.8);
 
 
-	coincide(pt, pt2);
+	pt.coincide(cercle);
 
 	return 0;
 }

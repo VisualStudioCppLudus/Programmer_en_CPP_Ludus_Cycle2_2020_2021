@@ -6,6 +6,7 @@
 
 using namespace std;
 
+class CCercle;
 class CPoint
 {
 
@@ -62,8 +63,8 @@ public:
 	bool coincidePoint(CPoint &pt);
 
 
-	//Fonction amie de la classe CPoint
-	friend bool coincide(CPoint& pt, CPoint& pt2);
+	//Fonction membre de la classe CPoint amie de la classe CCercle
+	bool coincide(CCercle& c);
 
 
 	static int val_cpt();
