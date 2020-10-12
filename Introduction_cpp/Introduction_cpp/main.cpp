@@ -73,6 +73,9 @@ int main() {
 
 	CCercle cercle(10, 12, 8.8);
 
+
+	coincide(pt, pt2);
+
 	return 0;
 }
 
@@ -108,3 +111,4 @@ void echangePoint(CPoint *pt, CPoint *pt1) {
 
 
 }
+

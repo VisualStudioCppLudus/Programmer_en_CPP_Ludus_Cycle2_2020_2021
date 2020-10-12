@@ -61,6 +61,11 @@ public:
 	//procedure coincidePoint
 	bool coincidePoint(CPoint &pt);
 
+
+	//Fonction amie de la classe CPoint
+	friend bool coincide(CPoint& pt, CPoint& pt2);
+
+
 	static int val_cpt();
 
 

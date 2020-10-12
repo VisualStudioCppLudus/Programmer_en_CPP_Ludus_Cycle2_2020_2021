@@ -90,3 +90,14 @@ int CPoint::val_cpt()
 	
 	return cpt;
 }
+
+bool coincide(CPoint& pt, CPoint& pt2)
+{
+	if (pt.m_nX == pt2.m_nX && pt.m_nY == pt2.m_nY)
+	{
+		return true;
+	}
+	else {
+		return false;
+	}
+}
