@@ -6,24 +6,16 @@ int  CPoint::cpt = 0;
 
 
 //Constructeur
-/*CPoint::CPoint()
-{
-	this->m_nX = 0;
-	this->m_nY = 0;
 
-	this->m_strType = "pivot";
-
-}*/
 
 CPoint::CPoint(int m_nX, int m_nY , string m_strType):m_nX(m_nX), m_nY(m_nY)
 {
 
-	/*this->m_nX = m_nX;
-	this->m_nY = m_nY;
-	this->m_strType = m_strType;*/
 
 	this->m_strType = new char[100];
 	strcpy_s(this->m_strType, 100, const_cast<char*>(m_strType.c_str()));
+
+	
 
 	cpt++;
 		
@@ -37,6 +29,8 @@ CPoint::CPoint(int m_nX, int m_nY)
 	this->m_strType = new char[100];
 	strcpy_s(this->m_strType, 100, "pivot");
 
+	
+
 	cpt++;
 }
 
@@ -44,6 +38,15 @@ CPoint::~CPoint()
 {
 	delete[] m_strType;
 	cpt--;
+}
+
+//Constructeur par copie
+CPoint::CPoint(const CPoint& pt)
+{
+	this->m_nX = pt.m_nX;
+	this->m_nY = pt.m_nY;
+	this->m_strType = new char[100];
+	strcpy_s(this->m_strType, 100, pt.m_strType);
 }
 
 //Assesseurs
@@ -74,7 +77,7 @@ void CPoint::deplacePoint(int n_X, int n_Y)
 	this->m_nY = this->m_nY + n_Y;
 }
 
-bool CPoint::coincidePoint(CPoint &pt)
+bool CPoint::coincidePoint(const CPoint &pt)
 {
 	if (this->m_nX == pt.m_nX && this->m_nY == pt.m_nY)
 	{
@@ -85,9 +88,10 @@ bool CPoint::coincidePoint(CPoint &pt)
 	}
 }
 
-bool CPoint::coincide(CCercle& c)
+bool CPoint::coincide(const CCercle& c)
 {
-	if (this->m_nX == c.m_Centre.m_nX && this->m_nY == c.m_Centre.m_nY) {
+	if (this->m_nX == c.m_Centre.m_nX && this->m_nY == c.m_Centre.m_nY) 
+	{
 		return true;
 	}else{
 		return false;
@@ -100,6 +104,84 @@ int CPoint::val_cpt()
 	return cpt;
 }
 
+CPoint CPoint::operator=(const CPoint& pt)
+{
+	this->m_nX = pt.m_nX;
+	this->m_nY = pt.m_nY;
+	this->m_strType = new char[100];
+	strcpy_s(this->m_strType, 100, pt.m_strType);
+
+	return *this;
+}
+
+
+
+
+
+/*CPoint* CPoint::operator+(const CPoint &pt)
+{
+
+	this->m_nX = this->m_nX + pt.m_nX;
+	this->m_nY = this->m_nY + pt.m_nY;
+	return this;
+}*/
+
+/*CPoint* CPoint::operator+(const CPoint pt)
+{
+	
+	this->m_nX = this->m_nX + pt.m_nX;
+	this->m_nY = this->m_nY + pt.m_nY;
+	return this;
+}*/
+
+
+/*CPoint CPoint::operator+(const CPoint pt)
+{
+	CPoint p;
+	p.m_nX = this->m_nX + pt.m_nX;
+	p.m_nY= this->m_nY + pt.m_nY;
+	return p;
+}*/
+
+
+
+/*CPoint operator+(const CPoint p1, const CPoint p2)
+{
+	CPoint ptemp;
+	ptemp.m_nX = p1.m_nX + p2.m_nX;
+	ptemp.m_nY = p1.m_nY + p2.m_nY;
+	return ptemp;
+}*/
+
+CPoint operator+(const CPoint &p1, const CPoint &p2)
+{
+	CPoint ptemp;
+	ptemp.m_nX = p1.m_nX + p2.m_nX;
+	ptemp.m_nY = p1.m_nY + p2.m_nY;
+	return ptemp;
+}
+
+
+CPoint CPoint::operator++() //notation prefixee
+{
+	m_nX++;
+	m_nY++;
+
+	return *this;
+
+}
+
+CPoint CPoint::operator++(int n)//notation postfixe
+{
+	CPoint p = *this;
+	m_nX++;
+	m_nY++;
+
+	return p;
+
+}
+
+
 /*bool coincide(CPoint& pt, CPoint& pt2)
 {
 	if (pt.m_nX == pt2.m_nX && pt.m_nY == pt2.m_nY)
@@ -110,3 +192,4 @@ int CPoint::val_cpt()
 		return false;
 	}
 }*/
+

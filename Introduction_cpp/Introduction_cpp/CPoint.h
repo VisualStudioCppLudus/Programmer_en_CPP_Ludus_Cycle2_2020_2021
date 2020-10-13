@@ -21,6 +21,8 @@ private:
 
 	static int cpt;
 
+	
+
 
 public:
 
@@ -44,9 +46,8 @@ public:
 
 	~CPoint();
 
-	
-	
-
+	//Constructeur par copie
+	CPoint(const CPoint&);
 
 	//Get
 	int getnX() const;
@@ -60,14 +61,40 @@ public:
 	void deplacePoint(int n_X, int n_Y);
 
 	//procedure coincidePoint
-	bool coincidePoint(CPoint &pt);
+	bool coincidePoint(const CPoint &pt);
 
 
 	//Fonction membre de la classe CPoint amie de la classe CCercle
-	bool coincide(CCercle& c);
+	bool coincide(const CCercle& c);
 
 
 	static int val_cpt();
+
+	//Surcharge opérateur + 
+	//CPoint operator+(const CPoint);
+	
+	//Surcharge operateur + (pointeur)
+	//CPoint * operator+(const CPoint);
+
+	//Surcharge operateur + et passage par ref
+	//CPoint * operator+(const CPoint&);
+
+
+	//surcharge operateur + fct amie
+	//friend CPoint operator+(const CPoint, const CPoint);
+
+	//surcharge operateur + fct amie et passage par ref
+	friend CPoint operator+(const CPoint &,const CPoint &);
+
+	//Surcharge = (assignation de CPoint)
+	CPoint operator=(const CPoint&);
+
+	CPoint operator++();
+
+	CPoint operator++(int n);
+
+
+
 
 
 };

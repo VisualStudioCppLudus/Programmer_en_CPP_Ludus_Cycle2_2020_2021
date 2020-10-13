@@ -15,7 +15,7 @@ public :
 
 	~CCercle();
 
-	friend bool CPoint::coincide(CCercle& c);
+	friend bool CPoint::coincide(const CCercle& c);
 
 
 

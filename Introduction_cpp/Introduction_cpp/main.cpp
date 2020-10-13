@@ -17,64 +17,43 @@ int main() {
 
 
 	
-	//Instance de classe CPoint
-	CPoint pt; //appel du constructeur sans parametres
-
-	CPoint pt2(8, 9,"pivot"); //appel du constructeur avec parametres
-	
-	//CPoint *tabPoint=new CPoint[TAILLE];
-
-
-	/*for (int i = 0; i < 100; i++)
-		tabPoint[i] = pt2;
-	
-	delete [] tabPoint;*/
-
-
-	pt.deplacePoint(2, 3);
 
 	CPoint pt3(8, 9, "point3");
 
-	if (pt2.coincidePoint(pt3)) {
-
-		cout << "Coincide" << endl;
-
-	}
-	else {
-
-		cout << "Ne coincide pas" << endl;
-	}
-
-
-	if (pt2.coincidePoint(pt)) {
-
-		cout << "Coincide" << endl;
-
-	}
-	else {
-
-		cout << "Ne coincide pas" << endl;
-	}
-
-
-
-
-	cout << "pt.x : " << pt.getnX() << " pt.y : " << pt.getnY() << endl;
-	cout << "pt2.x : " << pt2.getnX() << " pt2.y : " << pt2.getnY() << endl;
 	
 
-	echangePoint(pt, pt2);
+	CPoint pt4(pt3); //Appel du constructeur par copie
 
-	cout << "pt.x : " << pt.getnX() << " pt.y : " << pt.getnY() << endl;
-	cout << "pt2.x : " << pt2.getnX() << " pt2.y : " << pt2.getnY() << endl;
+	CPoint pt5=pt3; //Appel du constructeur par copie
 
-	cout << CPoint::val_cpt();
+	//Fonction membre operator + (valeur)
+	//pt5 = pt3 + pt4;
+
+	//Fonction membre operator + (pointeur)
+	/*CPoint* pt6;
+	pt6 = pt3 + pt4;*/
+
+	//Fonction amie operateur +
+	pt5 = pt4 + pt3;
+
+	pt5 = pt4++; //notation postfixee
+
+	pt5 = ++pt4; //notation prefixee
 
 
-	CCercle cercle(10, 12, 8.8);
+	/*CPoint pt6;
+	//Objet tempo
+	pt6= CPoint(8, 2, "test");*/
 
 
-	pt.coincide(cercle);
+
+	
+
+	
+
+	
+
+
 
 	return 0;
 }
