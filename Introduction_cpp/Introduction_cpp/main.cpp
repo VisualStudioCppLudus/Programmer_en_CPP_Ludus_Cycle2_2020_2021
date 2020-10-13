@@ -46,12 +46,18 @@ int main() {
 	pt6= CPoint(8, 2, "test");*/
 
 
-
+	/*cout << pt5;
 	
+	cin >> pt5;
 
-	
+	cout << pt5;*/
 
-	
+
+
+	CCercle c(10,15,12);
+
+	cout << c[0].getnX();
+	cout << c[0].getnY();
 
 
 

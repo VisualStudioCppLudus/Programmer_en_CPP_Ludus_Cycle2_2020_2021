@@ -94,6 +94,11 @@ public:
 	CPoint operator++(int n);
 
 
+	//Surcharge flux de sortie (cout)
+	friend std::ostream& operator<<(std::ostream& os, const CPoint& pt);
+
+	//Surcharge flux entrée (cin) 
+	friend std::istream& operator>>(std::istream& is, CPoint& pt);
 
 
 

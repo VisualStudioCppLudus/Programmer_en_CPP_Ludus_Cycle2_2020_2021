@@ -1,6 +1,9 @@
 #include "CPoint.h"
 #include "CCercle.h"
 
+#include <iostream>
+
+
 int  CPoint::cpt = 0;
 
 
@@ -159,6 +162,19 @@ CPoint operator+(const CPoint &p1, const CPoint &p2)
 	ptemp.m_nX = p1.m_nX + p2.m_nX;
 	ptemp.m_nY = p1.m_nY + p2.m_nY;
 	return ptemp;
+}
+
+std::ostream& operator<<(std::ostream& os, const CPoint& pt)
+{
+	return os << pt.m_nX <<" "<<pt.m_nY<<" "<<pt.m_strType<< std::endl;
+}
+
+std::istream& operator>>(std::istream& is, CPoint& pt)
+{
+	is >> pt.m_nX;
+	is >> pt.m_nY;
+	is >> pt.m_strType;
+	return is;
 }
 
 
