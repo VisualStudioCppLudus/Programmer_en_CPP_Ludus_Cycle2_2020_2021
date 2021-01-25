@@ -44,5 +44,8 @@
     <ClInclude Include="CComplexe.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TCPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

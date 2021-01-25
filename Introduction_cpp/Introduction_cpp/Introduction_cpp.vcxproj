@@ -149,6 +149,7 @@
     <ClInclude Include="CCercle.h" />
     <ClInclude Include="CComplexe.h" />
     <ClInclude Include="CPoint.h" />
+    <ClInclude Include="TCPoint.h" />
     <ClInclude Include="TPoint.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
