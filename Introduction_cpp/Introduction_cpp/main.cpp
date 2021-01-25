@@ -1,61 +1,90 @@
 #include <iostream>
-#include"CPoint.h"
-#include "CCercle.h"
-#include "CComplexe.h"
-
+#include "CPoint.h"
+#include <string.h>
 
 using namespace std;
 
-//void fct(CPoint p);
+
+/*int minimum(int n_a, int n_b);
+float minimum(float flt_a, float flt_b);*/
+
+//prototype template
+template <class T> T minimum(T a, T b);
+const char* minimum(const char* adr1, const char* adr2);
+
+//template <class T, class U> fct(T a, T* b, U c);
 
 
 int main() {
 
+	minimum(10, 8);
+	minimum(12.f, 5.f);
 
-	//Conversions de type
+	const char* adr1 = "hello";
+	const char* adr2 = "world";
 
-	int n_entier=5;
-	double dbl_z=10.f;
+	cout << minimum(adr1, adr2) << endl;
 
-	//Conversions implicites
-	//n_entier = dbl_z;
-	//dbl_z = n_entier;
+	CPoint pt(3,4);
+	CPoint pt2(1,2);
 
-	//Conversion explicites
-	//dbl_z = (double)n_entier;
-	//n_entier = (int)dbl_z;
-
-	//C++ normes
-	//dbl_z = static_cast<int>(n_entier);
-	//dynamic_cast<>()
-	//const_cast<>()
-	//reinterpret_cast<>()
+	cout << minimum(pt, pt2) << endl;
 
 
-	CPoint a(3, 4), b(5, 7);
-	int n_n1, n_n2;
 
-	n_n1 = (int)a; //appel explicite de int()
-	//ou n_n1=static_cast<int>(a);
 
-	
-
-	n_n2 = b; //appel implicite de int()
-
-	
-	fct(a);
-
-	//appel implicite expression.
-	n_n2 = a + 2;
-
-	//fct(4);
-
-	//Conversion d'un type de classe en un autre type de classe
-	CComplexe c;
-	c = b;
-	c.affiche();
-
-	return 0;
+return 0;
 }
+
+/*template <class T, class U> fct(T a, T* b, U c) {
+
+
+
+
+}*/
+
+//template <typename T>.....
+//export 
+template <class T> T minimum(T a, T b) {
+
+	if (a < b)
+		return a;
+	else
+		return b;
+
+}
+
+//Specialisation de minimum pour char *
+const char* minimum(const char* adr1, const char* adr2) {
+
+	if (strcmp(adr1, adr2) < 0)
+		return adr1;
+	else
+		return adr2;
+
+
+}
+
+//minimum avec deux integer
+/*int minimum(int n_a, int n_b) {
+
+	if (n_a < n_b)
+		return n_a;
+	else
+		return n_b;
+
+}
+
+//minimum avec deux float
+
+float minimum(float flt_a,float flt_b) {
+
+
+	if (flt_a < flt_b)
+		return flt_a;
+	else
+		return flt_b;
+
+}*/
 
 

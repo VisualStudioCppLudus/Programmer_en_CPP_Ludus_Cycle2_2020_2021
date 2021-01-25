@@ -221,6 +221,8 @@ CPoint::operator int() const {
 	return m_nX;
 }
 
+
+
 CPoint::operator CComplexe()
 { 
 	CComplexe r;
@@ -230,6 +232,11 @@ CPoint::operator CComplexe()
 	return r;
 
 
+}
+
+int CPoint::operator<(CPoint p)const 
+{
+	return this->m_nX * this->m_nX + this->m_nY * this->m_nY < p.m_nX* p.m_nX + p.m_nY * p.m_nY;
 }
 
 void fct(int n_n)

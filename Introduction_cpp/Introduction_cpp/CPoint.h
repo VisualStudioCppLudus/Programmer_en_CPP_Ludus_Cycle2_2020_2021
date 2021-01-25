@@ -111,6 +111,9 @@ public:
 	//Conversion d'un type de classe en un autre type de classe
 	operator CComplexe();//conversion point=> complexe
 
+	//Surcharge de l'operateur <
+	int operator<(CPoint)const ;
+
 
 };
 
