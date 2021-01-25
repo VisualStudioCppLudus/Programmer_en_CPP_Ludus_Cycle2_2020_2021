@@ -1,5 +1,6 @@
 #include "CPoint.h"
 #include "CCercle.h"
+#include "CComplexe.h"
 
 #include <iostream>
 
@@ -156,13 +157,13 @@ CPoint CPoint::operator=(const CPoint& pt)
 	return ptemp;
 }*/
 
-CPoint operator+(const CPoint &p1, const CPoint &p2)
+/*CPoint operator+(const CPoint &p1, const CPoint &p2)
 {
 	CPoint ptemp;
 	ptemp.m_nX = p1.m_nX + p2.m_nX;
 	ptemp.m_nY = p1.m_nY + p2.m_nY;
 	return ptemp;
-}
+}*/
 
 std::ostream& operator<<(std::ostream& os, const CPoint& pt)
 {
@@ -198,6 +199,7 @@ CPoint CPoint::operator++(int n)//notation postfixe
 }
 
 
+
 /*bool coincide(CPoint& pt, CPoint& pt2)
 {
 	if (pt.m_nX == pt2.m_nX && pt.m_nY == pt2.m_nY)
@@ -209,3 +211,36 @@ CPoint CPoint::operator++(int n)//notation postfixe
 	}
 }*/
 
+
+
+//Conversion de point en int()
+
+
+CPoint::operator int() const {
+
+	return m_nX;
+}
+
+CPoint::operator CComplexe()
+{ 
+	CComplexe r;
+	r.dbl_reel = m_nX;
+	r.dbl_imag = m_nY;
+
+	return r;
+
+
+}
+
+void fct(int n_n)
+{
+	cout << "appel fct avec argument : " << n_n << endl;
+}
+
+
+
+void fct(CPoint p)
+{
+	cout << "appel fct(point)" << endl;
+
+}

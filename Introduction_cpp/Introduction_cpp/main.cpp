@@ -1,99 +1,61 @@
+#include <iostream>
 #include"CPoint.h"
 #include "CCercle.h"
-#include <iostream>
+#include "CComplexe.h"
 
 
 using namespace std;
 
-void echangePoint(CPoint&, CPoint&);
-
-
-void echangePoint(CPoint*, CPoint*);
-
-const int TAILLE = 100;
+//void fct(CPoint p);
 
 
 int main() {
 
 
+	//Conversions de type
+
+	int n_entier=5;
+	double dbl_z=10.f;
+
+	//Conversions implicites
+	//n_entier = dbl_z;
+	//dbl_z = n_entier;
+
+	//Conversion explicites
+	//dbl_z = (double)n_entier;
+	//n_entier = (int)dbl_z;
+
+	//C++ normes
+	//dbl_z = static_cast<int>(n_entier);
+	//dynamic_cast<>()
+	//const_cast<>()
+	//reinterpret_cast<>()
+
+
+	CPoint a(3, 4), b(5, 7);
+	int n_n1, n_n2;
+
+	n_n1 = (int)a; //appel explicite de int()
+	//ou n_n1=static_cast<int>(a);
+
 	
 
-	CPoint pt3(8, 9, "point3");
+	n_n2 = b; //appel implicite de int()
 
 	
+	fct(a);
 
-	CPoint pt4(pt3); //Appel du constructeur par copie
+	//appel implicite expression.
+	n_n2 = a + 2;
 
-	CPoint pt5=pt3; //Appel du constructeur par copie
+	//fct(4);
 
-	//Fonction membre operator + (valeur)
-	//pt5 = pt3 + pt4;
-
-	//Fonction membre operator + (pointeur)
-	/*CPoint* pt6;
-	pt6 = pt3 + pt4;*/
-
-	//Fonction amie operateur +
-	pt5 = pt4 + pt3;
-
-	pt5 = pt4++; //notation postfixee
-
-	pt5 = ++pt4; //notation prefixee
-
-
-	/*CPoint pt6;
-	//Objet tempo
-	pt6= CPoint(8, 2, "test");*/
-
-
-	/*cout << pt5;
-	
-	cin >> pt5;
-
-	cout << pt5;*/
-
-
-
-	CCercle c(10,15,12);
-
-	cout << c[0].getnX();
-	cout << c[0].getnY();
-
-
+	//Conversion d'un type de classe en un autre type de classe
+	CComplexe c;
+	c = b;
+	c.affiche();
 
 	return 0;
 }
 
-
-void echangePoint(CPoint &pt, CPoint &pt1) {
-
-	CPoint ptTmp;
-
-	ptTmp.setnX(pt.getnX());
-	ptTmp.setnY(pt.getnY());
-
-	pt.setnX(pt1.getnX());
-	pt.setnY(pt1.getnY());
-
-	pt1.setnX(ptTmp.getnX());
-	pt1.setnY(ptTmp.getnY());
-
-
-}
-
-void echangePoint(CPoint *pt, CPoint *pt1) {
-
-	CPoint ptTmp;
-
-	ptTmp.setnX(pt->getnX());
-	ptTmp.setnY(pt->getnY());
-
-	pt->setnX(pt1->getnX());
-	pt->setnY(pt1->getnY());
-
-	pt1->setnX(ptTmp.getnX());
-	pt1->setnY(ptTmp.getnY());
-
-
-}
 

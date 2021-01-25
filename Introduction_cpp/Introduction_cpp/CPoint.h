@@ -7,6 +7,8 @@
 using namespace std;
 
 class CCercle;
+class CComplexe;
+
 class CPoint
 {
 
@@ -84,7 +86,7 @@ public:
 	//friend CPoint operator+(const CPoint, const CPoint);
 
 	//surcharge operateur + fct amie et passage par ref
-	friend CPoint operator+(const CPoint &,const CPoint &);
+	//friend CPoint operator+(const CPoint &,const CPoint &);
 
 	//Surcharge = (assignation de CPoint)
 	CPoint operator=(const CPoint&);
@@ -100,6 +102,14 @@ public:
 	//Surcharge flux entrée (cin) 
 	friend std::istream& operator>>(std::istream& is, CPoint& pt);
 
+	//Conversion type point => int()
+	operator int() const;
+
+	friend void fct(int n_n);//appel implicite fct
+
+	
+	//Conversion d'un type de classe en un autre type de classe
+	operator CComplexe();//conversion point=> complexe
 
 
 };
