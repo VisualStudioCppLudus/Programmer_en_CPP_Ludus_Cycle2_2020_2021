@@ -13,10 +13,10 @@ template <class T> class TCPoint {
 public :
 	TCPoint(T abs = 0, T ord = 0);
 
-	T getX() {
+	T  getX() const {
 		return this->m_x;
 	}
-	T getY() {
+	T  getY() const {
 		return this->m_y;
 	}
 
@@ -44,7 +44,7 @@ inline TCPoint<T>::TCPoint(T abs, T ord)
 template<class T>
 void TCPoint<T>::affiche()const {
 
-	cout << "x : " << m_x << " y : " << m_y<< endl;
+	cout << "x : " << this->getX() << " y : " << m_y<< endl;
 
 }
 
