@@ -142,6 +142,7 @@
     <ClCompile Include="CCercle.cpp" />
     <ClCompile Include="CComplexe.cpp" />
     <ClCompile Include="CPoint.cpp" />
+    <ClCompile Include="CPointcol.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="tpoint.cpp" />
   </ItemGroup>
@@ -149,6 +150,7 @@
     <ClInclude Include="CCercle.h" />
     <ClInclude Include="CComplexe.h" />
     <ClInclude Include="CPoint.h" />
+    <ClInclude Include="CPointcol.h" />
     <ClInclude Include="TCPoint.h" />
     <ClInclude Include="TPoint.h" />
   </ItemGroup>

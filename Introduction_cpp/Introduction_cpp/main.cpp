@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string.h>
-#include "TCPoint.h"
+#include "CPointcol.h"
+
 
 using namespace std;
 
@@ -8,17 +9,23 @@ using namespace std;
 
 int main() {
 
-	//template classe TCPoint
-	TCPoint<int> pointInt(3, 8);
 
-	TCPoint<double> pointDbl(3.f, 9.f);
+	CPoint p1;
 
-	pointInt.affiche();
+	CPointcol pColor(5,8,255);
 
-	pointDbl.affiche();
+	CPointcol pColor2(5,8,255,"test");
 
-	tableau <TCPoint<int>, 10> t;
+	pColor.setColor(255);
 
+	/*cout << "couleur : " << pColor.getColor() << endl;
+
+	cout << "x : " << pColor.getnX() <<"y : "<<pColor.getnY()<< endl;*/
+
+
+	pColor.affiche();
+
+	
 
 return 0;
 }

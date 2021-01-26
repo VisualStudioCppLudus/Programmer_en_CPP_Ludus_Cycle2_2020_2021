@@ -30,6 +30,9 @@
     <ClCompile Include="CComplexe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CPointcol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TPoint.h">
@@ -45,6 +48,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TCPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPointcol.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -65,6 +65,10 @@ public:
 	//procedure coincidePoint
 	bool coincidePoint(const CPoint &pt);
 
+	//Procedure affiche
+	void affiche()const;
+
+
 
 	//Fonction membre de la classe CPoint amie de la classe CCercle
 	bool coincide(const CCercle& c);

@@ -40,6 +40,7 @@ CPoint::CPoint(int m_nX, int m_nY)
 
 CPoint::~CPoint()
 {
+	cout << "Destruction d'un CPoint" << endl;
 	delete[] m_strType;
 	cpt--;
 }
@@ -90,6 +91,12 @@ bool CPoint::coincidePoint(const CPoint &pt)
 	else {
 		return false;
 	}
+}
+
+void CPoint::affiche() const
+{
+	cout << " x : " << m_nX<< endl;
+	cout << " y : " << m_nY<< endl;
 }
 
 bool CPoint::coincide(const CCercle& c)
