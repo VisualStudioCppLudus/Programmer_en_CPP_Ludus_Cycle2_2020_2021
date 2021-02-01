@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="CCercle.h" />
     <ClInclude Include="CComplexe.h" />
+    <ClInclude Include="CCoul.h" />
     <ClInclude Include="CPoint.h" />
     <ClInclude Include="CPointcol.h" />
     <ClInclude Include="TCPoint.h" />
