@@ -48,6 +48,7 @@ public:
 
 	~CPoint();
 
+
 	//Constructeur par copie
 	CPoint(const CPoint&);
 
