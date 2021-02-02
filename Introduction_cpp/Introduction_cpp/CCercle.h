@@ -6,7 +6,7 @@
 
 class CCercle {
 
-	float m_fltRayon;
+	/*float m_fltRayon;
 	CPoint m_Centre;
 
 	CPoint vecteur[100];
@@ -19,7 +19,7 @@ public :
 
 	friend bool CPoint::coincide(const CCercle& c);
 
-	CPoint& operator[](int);
+	CPoint& operator[](int);*/
 
 
 

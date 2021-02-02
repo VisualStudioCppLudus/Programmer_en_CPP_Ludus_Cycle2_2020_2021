@@ -29,16 +29,6 @@ private:
 public:
 
 	
-	
-
-	//pas de fct init
-	/*inline void init() {
-		m_nX = 0;
-		m_nY = 0;
-	}*/
-
-	
-	
 
 	//Constructeur avec parametres
 	CPoint(int n_valx, int n_valy, string m_strType);
@@ -67,45 +57,12 @@ public:
 	bool coincidePoint(const CPoint &pt);
 
 	//Procedure affiche
-	void affiche()const;
-
-
-
-	//Fonction membre de la classe CPoint amie de la classe CCercle
-	bool coincide(const CCercle& c);
+	virtual void affiche() const =0;
 
 
 	static int val_cpt();
 
-	//Surcharge opérateur + 
-	//CPoint operator+(const CPoint);
 	
-	//Surcharge operateur + (pointeur)
-	//CPoint * operator+(const CPoint);
-
-	//Surcharge operateur + et passage par ref
-	//CPoint * operator+(const CPoint&);
-
-
-	//surcharge operateur + fct amie
-	//friend CPoint operator+(const CPoint, const CPoint);
-
-	//surcharge operateur + fct amie et passage par ref
-	//friend CPoint operator+(const CPoint &,const CPoint &);
-
-	//Surcharge = (assignation de CPoint)
-	CPoint operator=(const CPoint&);
-
-	CPoint operator++();
-
-	CPoint operator++(int n);
-
-
-	//Surcharge flux de sortie (cout)
-	friend std::ostream& operator<<(std::ostream& os, const CPoint& pt);
-
-	//Surcharge flux entrée (cin) 
-	friend std::istream& operator>>(std::istream& is, CPoint& pt);
 
 	//Conversion type point => int()
 	operator int() const;
@@ -116,8 +73,6 @@ public:
 	//Conversion d'un type de classe en un autre type de classe
 	operator CComplexe();//conversion point=> complexe
 
-	//Surcharge de l'operateur <
-	int operator<(CPoint)const ;
 
 
 };

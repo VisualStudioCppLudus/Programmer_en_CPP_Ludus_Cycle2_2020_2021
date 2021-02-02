@@ -93,21 +93,13 @@ bool CPoint::coincidePoint(const CPoint &pt)
 	}
 }
 
-void CPoint::affiche() const
+/*void CPoint::affiche() const
 {
 	cout << " x : " << m_nX<< endl;
 	cout << " y : " << m_nY<< endl;
-}
+}*/
 
-bool CPoint::coincide(const CCercle& c)
-{
-	if (this->m_nX == c.m_Centre.m_nX && this->m_nY == c.m_Centre.m_nY) 
-	{
-		return true;
-	}else{
-		return false;
-	}
-}
+
 
 int CPoint::val_cpt()
 {
@@ -115,108 +107,6 @@ int CPoint::val_cpt()
 	return cpt;
 }
 
-CPoint CPoint::operator=(const CPoint& pt)
-{
-	this->m_nX = pt.m_nX;
-	this->m_nY = pt.m_nY;
-	this->m_strType = new char[100];
-	strcpy_s(this->m_strType, 100, pt.m_strType);
-
-	return *this;
-}
-
-
-
-
-
-/*CPoint* CPoint::operator+(const CPoint &pt)
-{
-
-	this->m_nX = this->m_nX + pt.m_nX;
-	this->m_nY = this->m_nY + pt.m_nY;
-	return this;
-}*/
-
-/*CPoint* CPoint::operator+(const CPoint pt)
-{
-	
-	this->m_nX = this->m_nX + pt.m_nX;
-	this->m_nY = this->m_nY + pt.m_nY;
-	return this;
-}*/
-
-
-/*CPoint CPoint::operator+(const CPoint pt)
-{
-	CPoint p;
-	p.m_nX = this->m_nX + pt.m_nX;
-	p.m_nY= this->m_nY + pt.m_nY;
-	return p;
-}*/
-
-
-
-/*CPoint operator+(const CPoint p1, const CPoint p2)
-{
-	CPoint ptemp;
-	ptemp.m_nX = p1.m_nX + p2.m_nX;
-	ptemp.m_nY = p1.m_nY + p2.m_nY;
-	return ptemp;
-}*/
-
-/*CPoint operator+(const CPoint &p1, const CPoint &p2)
-{
-	CPoint ptemp;
-	ptemp.m_nX = p1.m_nX + p2.m_nX;
-	ptemp.m_nY = p1.m_nY + p2.m_nY;
-	return ptemp;
-}*/
-
-std::ostream& operator<<(std::ostream& os, const CPoint& pt)
-{
-	return os << pt.m_nX <<" "<<pt.m_nY<<" "<<pt.m_strType<< std::endl;
-}
-
-std::istream& operator>>(std::istream& is, CPoint& pt)
-{
-	is >> pt.m_nX;
-	is >> pt.m_nY;
-	is >> pt.m_strType;
-	return is;
-}
-
-
-CPoint CPoint::operator++() //notation prefixee
-{
-	m_nX++;
-	m_nY++;
-
-	return *this;
-
-}
-
-CPoint CPoint::operator++(int n)//notation postfixe
-{
-	CPoint p = *this;
-	m_nX++;
-	m_nY++;
-
-	return p;
-
-}
-
-
-
-/*bool coincide(CPoint& pt, CPoint& pt2)
-{
-	if (pt.m_nX == pt2.m_nX && pt.m_nY == pt2.m_nY)
-	{
-		return true;
-	}
-	else {
-		return false;
-	}
-}*/
 
 
 
@@ -241,10 +131,6 @@ CPoint::operator CComplexe()
 
 }
 
-int CPoint::operator<(CPoint p)const 
-{
-	return this->m_nX * this->m_nX + this->m_nY * this->m_nY < p.m_nX* p.m_nX + p.m_nY * p.m_nY;
-}
 
 void fct(int n_n)
 {
@@ -252,9 +138,3 @@ void fct(int n_n)
 }
 
 
-
-void fct(CPoint p)
-{
-	cout << "appel fct(point)" << endl;
-
-}

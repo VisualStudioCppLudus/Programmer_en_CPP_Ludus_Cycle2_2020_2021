@@ -7,11 +7,23 @@ using namespace std;
 
 int main() {
 
-	CPointcol pcolor(2, 3, 255);
+	CPointcol b;
+	CPointcol* pb=&b;
+	CPointcol a;
+
+	b.affiche();
+
+
+	a = b;
+
 	
-	pcolor.affiche();
+	
 
 
+
+
+
+	
 
 
 
