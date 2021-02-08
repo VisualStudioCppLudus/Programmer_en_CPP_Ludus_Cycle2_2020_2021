@@ -143,6 +143,7 @@
     <ClCompile Include="CComplexe.cpp" />
     <ClCompile Include="CPoint.cpp" />
     <ClCompile Include="CPointcol.cpp" />
+    <ClCompile Include="CVect.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="tpoint.cpp" />
   </ItemGroup>
@@ -152,6 +153,8 @@
     <ClInclude Include="CCoul.h" />
     <ClInclude Include="CPoint.h" />
     <ClInclude Include="CPointcol.h" />
+    <ClInclude Include="CVect.h" />
+    <ClInclude Include="CVect_limite.h" />
     <ClInclude Include="TCPoint.h" />
     <ClInclude Include="TPoint.h" />
   </ItemGroup>

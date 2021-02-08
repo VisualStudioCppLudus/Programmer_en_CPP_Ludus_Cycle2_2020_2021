@@ -9,6 +9,7 @@ CPointcol::CPointcol(short n_cl) :CPoint(0, 0, "test")
 	
 	m_ncouleur = n_cl;
 	//this->m_ncouleur;
+	
 
 }
 

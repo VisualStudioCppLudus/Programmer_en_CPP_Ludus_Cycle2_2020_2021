@@ -33,6 +33,9 @@
     <ClCompile Include="CPointcol.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CVect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TPoint.h">
@@ -54,6 +57,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CCoul.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CVect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CVect_limite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
